@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 68222efded2a6688c1e0af411e0cff039662fb0a80ea50d55c11045ca5ff8912
+
+name:           parallel-concurrent
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/gillchristian/parallel-concurrent#readme>
+homepage:       https://github.com/githubuser/parallel-concurrent#readme
+bug-reports:    https://github.com/githubuser/parallel-concurrent/issues
+author:         Christian Gill
+maintainer:     gillchristiang@gmail.com
+copyright:      2020 Author name here
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    readme.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/parallel-concurrent
+
+library
+  exposed-modules:
+      Sudoku
+      Sudoku1
+      Sudoku2
+      Sudoku3
+  other-modules:
+      Paths_parallel_concurrent
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , deepseq
+    , parallel
+    , time
+  default-language: Haskell2010
+
+executable parallel-concurrent-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_parallel_concurrent
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , deepseq
+    , parallel
+    , parallel-concurrent
+    , time
+  default-language: Haskell2010
+
+test-suite parallel-concurrent-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_parallel_concurrent
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , deepseq
+    , parallel
+    , parallel-concurrent
+    , time
+  default-language: Haskell2010

@@ -1,0 +1,44 @@
+name:                parallel-concurrent
+version:             0.1.0.0
+github:              "githubuser/parallel-concurrent"
+license:             MIT
+author:              "Christian Gill"
+maintainer:          "gillchristiang@gmail.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- readme.md
+
+description:         Please see the README on GitHub at <https://github.com/gillchristian/parallel-concurrent#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- array
+- parallel
+- time
+- deepseq
+
+library:
+  source-dirs: src
+
+executables:
+  parallel-concurrent-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - parallel-concurrent
+
+tests:
+  parallel-concurrent-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - parallel-concurrent
