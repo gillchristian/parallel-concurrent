@@ -1,5 +1,5 @@
 module Main where
 
-import Sudoku3
+import KMeans01
 
-main = runSudoku
+main = runKmeans01

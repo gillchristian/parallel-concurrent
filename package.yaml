@@ -17,6 +17,12 @@ dependencies:
 - parallel
 - time
 - deepseq
+- bytestring
+- binary
+- vector
+- monad-par
+- random
+- normaldistribution
 
 library:
   source-dirs: src

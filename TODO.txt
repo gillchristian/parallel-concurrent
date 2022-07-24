@@ -1,0 +1,4 @@
+- [x] Chat commands (!discord !project !github !schedule)
+- [x] Book https://simonmar.github.io/pages/pcph.html
+- [x] Code: https://github.com/gillchristian/parallel-concurrent
+- [x] Chapters 2 - part 2

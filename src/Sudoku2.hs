@@ -28,9 +28,3 @@ runSudoku = do
         rseq bs' -- <3>
         return (as' ++ bs') -- <4>
   print (length (filter isJust solutions))
-
-data Tree a = Nil | Branch (Tree a) a (Tree a)
-
-instance NFData a => NFData (Tree a) where
-  rnf Nil = ()
-  rnf (Branch l a r) = rnf l `seq` rnf a `seq` rnf r
